@@ -1,13 +1,12 @@
 import React from 'react';
-import ScrollContent from '../components/ScrollContent';
-
+import AboutScrollContent from '../components/AboutScrollContent';
 
 function AboutScreen (props) {
     return <section className="about">
         <div className="section-border">
             <div class="split right">
                 <div class="centered">
-                    <ScrollContent></ScrollContent>
+                    <AboutScrollContent></AboutScrollContent>
                 </div>
             </div>
         </div>

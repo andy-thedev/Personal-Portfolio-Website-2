@@ -7,10 +7,13 @@ import SkillsScreen from './screens/SkillsScreen';
 import MyWorkScreen from './screens/MyWorkScreen';
 import ContactScreen from './screens/ContactScreen';
 
+import NavigationBar from './components/NavigationBar';
+
 
 function App() {
   return (
     <BrowserRouter>
+      <NavigationBar></NavigationBar>
       <Switch>
         <Route path="/" exact={true} component={HomeScreen} />
         <Route path="/about" component = {AboutScreen}/>
