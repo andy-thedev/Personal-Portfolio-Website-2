@@ -17,6 +17,7 @@ code {
     --fw-bold: 700;
     /*colour*/
     --clr-light: #fff;
+    --clr-neutral: #606060;
     --clr-dark: #303030;
     --clr-accent: #ff0000;
     /*font size*/
@@ -72,18 +73,18 @@ code {
     z-index: 100;
     position: fixed;
     top: 2.5rem;
-    right: 3.5rem;
+    right: 3rem;
   }
 
   .navbar-link {
     font-family: var(--ff-btn);
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .navbar-link a{
-    color: var(--clr-dark);
+    color: var(--clr-neutral);
     text-decoration: none;
   }
 
@@ -127,7 +128,6 @@ code {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: left;
   }
 
   /* Scrollable content */
@@ -142,8 +142,8 @@ code {
       scroll-behavior: smooth;
     }
     .content-scroll-arrow {
+      color: var(--clr-dark);
       text-align: center;
-      margin-left: 2.5rem;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
     .content-scroll::-webkit-scrollbar {
