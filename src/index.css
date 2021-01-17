@@ -98,6 +98,7 @@ code {
 
   /* Rectangular border frame in background */
   .section-border {
+    position: fixed;
     width: calc(100% - 3rem);
     height: calc(100% - 3rem);
     border: 2px solid #000;
@@ -130,52 +131,64 @@ code {
     transform: translate(-50%, -50%);
   }
 
-  /* Scrollable content */
-    .content-scroll {
-      width: 90%;
-      height: 550px;
-      margin: auto auto auto 1rem;
-      overflow: auto;
-      /* Hide scrollbar for IE/Edge and Firefox, respectively */
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      scroll-behavior: smooth;
-    }
-    .content-scroll-arrow {
-      color: var(--clr-dark);
-      text-align: center;
-    }
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .content-scroll::-webkit-scrollbar {
-      display: none;
-    }
+/* Scroll Content */
+  .content-scroll {
+    width: 90%;
+    height: 550px;
+    margin: auto auto auto 1rem;
+    overflow: auto;
+    /* Hide scrollbar for IE/Edge and Firefox, respectively */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .content-scroll-arrow {
+    color: var(--clr-dark);
+    text-align: center;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .content-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thumbnail_img {
+    width: 90%;
+  }
 
 /* Home Screen */
 
   .home {
-    background-image: url(backgroundimg/home.jpg);
+    background-image: url(img/background/home.jpg);
   }
 
 /* About Screen */
 
   .about {
-    background-image: url(backgroundimg/about.jpg);
+    background-image: url(img/background/about.jpg);
   }
 
 /* Skills Screen */
 
   .skills {
-    background-image: url(backgroundimg/skills.jpg);
+    background-image: url(img/background/skills.jpg);
   }
 
 /* My Work Screen */
 
   .mywork {
-    background-image: url(backgroundimg/mywork.jpg);
+    background-image: url(img/background/mywork.jpg);
+  }
+
+  .mywork .content-scroll {
+    z-index: 100;
+    width: 50%;
+    height: 940px;
   }
 
 /* Contact Screen */
 
   .contact {
-    background-image: url(backgroundimg/contact.jpg);
+    background-image: url(img/background/contact.jpg);
   }
