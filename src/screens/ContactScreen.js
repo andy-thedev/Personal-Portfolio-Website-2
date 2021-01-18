@@ -1,8 +1,9 @@
 import React from 'react';
+import SectionBorder from '../components/SectionBorder';
 
 function ContactScreen (props) {
     return <section className="contact">
-        <div className="section-border"></div>
+        <SectionBorder></SectionBorder>
     </section>
 }
 
