@@ -1,8 +1,10 @@
 import React from 'react';
 
+import SectionBorder from '../components/SectionBorder';
+
 function HomeScreen (props) {
     return <section className="home">
-        <div className="section-border"></div>
+        <SectionBorder></SectionBorder>
     </section>
 }
 

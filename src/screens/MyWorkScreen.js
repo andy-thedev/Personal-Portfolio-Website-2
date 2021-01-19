@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import SectionBorder from '../components/SectionBorder';
 import Project0 from '../components/content/Project0';
+import Project1 from '../components/content/Project1';
 
 import project0_bw from '../img/thumbnails/project-000.jpg'
 import project1_bw from '../img/thumbnails/project-010.jpg'
@@ -20,7 +21,7 @@ import project5 from '../img/thumbnails/project-05.jpg'
 import project6 from '../img/thumbnails/project-06.jpg'
 
 function MyWorkScreen (props) {
-    const [work, setWork] = useState(project0);
+    const [work, setWork] = useState(project1);
 
     return <section className="mywork">
         <SectionBorder></SectionBorder>
@@ -51,7 +52,8 @@ function MyWorkScreen (props) {
         </div>
         <div className="split left">
             <div className="centered">
-                {(work === project0) ? <Project0></Project0> :
+                {(work === project0) ? <Project0></Project0> : 
+                (work === project1) ? <Project1></Project1>:
                 <div>okok</div>}
             </div>
         </div>

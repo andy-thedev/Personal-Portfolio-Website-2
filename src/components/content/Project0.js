@@ -4,11 +4,11 @@ import { BsChevronDown } from 'react-icons/bs';
 import img0 from '../../img/projects/project0/img0.JPG';
 import img1 from '../../img/projects/project0/img1.JPG';
 
-import addToCart from '../../videos/1add_to_cart.mp4'
-import login from '../../videos/2login.mp4'
-import sort from '../../videos/3sort.mp4'
-import create from '../../videos/4create_product.mp4'
-import editDelete from '../../videos/5edit_delete_product.mp4'
+import addToCart from '../../videos/project0/1add_to_cart.mp4'
+import login from '../../videos/project0/2login.mp4'
+import sort from '../../videos/project0/3sort.mp4'
+import create from '../../videos/project0/4create_product.mp4'
+import editDelete from '../../videos/project0/5edit_delete_product.mp4'
 
 function Project0 (props) {
     return <div>
@@ -18,7 +18,13 @@ function Project0 (props) {
                 This project demonstrates a fully functioning eCommerce website, 
                 utilizing the MERN (MongoDB, Express, React, Node) stack.
             </p>
-            <img src={img1} alt="Sidebar component" className="project_img"></img>  
+            <img src={img1} alt="Sidebar component" className="project_img"></img>
+            <p className="space">
+                Front-end: ReactJS, HTML, CSS, Redux<br/>
+                Back-end: NodeJS, ExpressJS<br/>
+                Database: MongoDB<br/>
+                Version Control: Git Bash
+            </p>
             <p className="space">
                 Feature 1:
             </p>
