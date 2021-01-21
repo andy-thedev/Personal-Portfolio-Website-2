@@ -109,10 +109,28 @@ function Project0 (props) {
                 No restarts or refreshes are needed to update rendering information.
                 All changes to products and users are reflected instantaneously in display.
             </p>
-            <video controls className="project_video" id="end-of-scroll">
+            <video controls className="project_video">
                 <source src={editDelete} type="video/mp4"></source>
                 Your browser does not support the video tag.
             </video>
+            <h2 className="space">
+                More info:
+            </h2>
+            <p id="end-of-scroll">
+                Code and documentation:
+            </p>
+            <p>
+                <a href="https://github.com/dnjsxo1860/KNN-Vehicle-Evaluation" target="_blank" rel="noopener noreferrer">In this Github link</a>
+            </p>
+            <p>
+                Detailed explanations:<br/>
+                KNN.py<br/> 
+                (above each line of code)
+            </p>
+            <p>
+                Table of Contents:<br/>
+                README.md
+            </p>
         </div>
         <a href="#end-of-scroll">
             <div className="content-scroll-arrow" style={{marginRight:"3rem"}}>

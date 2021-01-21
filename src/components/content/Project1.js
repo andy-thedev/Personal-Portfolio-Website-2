@@ -160,6 +160,10 @@ function Project0 (props) {
                 Detailed explanations for NEAT specifications:<br/>
                 config_explanations.txt
             </p>
+            <p>
+                Table of Contents:<br/>
+                README.md
+            </p>
             <p className="space"></p>
         </div>
         <a href="#end-of-scroll">
