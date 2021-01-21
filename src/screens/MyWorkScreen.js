@@ -1,60 +1,93 @@
 import React, {useState} from 'react';
 
+import { BsChevronUp } from 'react-icons/bs';
+import { BsChevronDown } from 'react-icons/bs';
+
 import SectionBorder from '../components/SectionBorder';
-import Project0 from '../components/content/Project0';
-import Project1 from '../components/content/Project1';
 
-import project0_bw from '../img/thumbnails/project-000.jpg'
-import project1_bw from '../img/thumbnails/project-010.jpg'
-import project2_bw from '../img/thumbnails/project-020.jpg'
-import project3_bw from '../img/thumbnails/project-030.jpg'
-import project4_bw from '../img/thumbnails/project-040.jpg'
-import project5_bw from '../img/thumbnails/project-050.jpg'
-import project6_bw from '../img/thumbnails/project-060.jpg'
+import IndivisualWebsite from '../components/content/IndivisualWebsite';
+import ECommerceWebsite from '../components/content/ECommerceWebsite';
+import FlappyBird from '../components/content/FlappyBird';
+import MovieTextModel from '../components/content/MovieTextModel';
+import ClothingPixelModel from '../components/content/ClothingPixelModel';
+import VehicleKnnModel from '../components/content/VehicleKnnModel';
+import GradeRegressionModel from '../components/content/GradeRegressionModel';
+import CancerSvmModel from '../components/content/CancerSvmModel';
 
-import project0 from '../img/thumbnails/project-00.jpg'
-import project1 from '../img/thumbnails/project-01.jpg'
-import project2 from '../img/thumbnails/project-02.jpg'
-import project3 from '../img/thumbnails/project-03.jpg'
-import project4 from '../img/thumbnails/project-04.jpg'
-import project5 from '../img/thumbnails/project-05.jpg'
-import project6 from '../img/thumbnails/project-06.jpg'
+import indivisualWebsite_c from '../img/thumbnails/indivisualWebsite_c.jpg';
+import eCommerceWebsite_c from '../img/thumbnails/eCommerceWebsite.jpg';
+import flappyBird_c from '../img/thumbnails/flappyBird.jpg';
+import movieTextModel_c from '../img/thumbnails/movieTextModel.jpg';
+import clothingPixelModel_c from '../img/thumbnails/clothingPixelModel.jpg';
+import vehicleKnnModel_c from '../img/thumbnails/vehicleKnnModel.jpg';
+import gradeRegressionModel_c from '../img/thumbnails/gradeRegressionModel.jpg';
+import cancerSvmModel_c from '../img/thumbnails/cancerSvmModel.jpg';
+
+import indivisualWebsite_bw from '../img/thumbnails/indivisualWebsite_bw.jpg';
+import eCommerceWebsite_bw from '../img/thumbnails/eCommerceWebsite_bw.jpg';
+import flappyBird_bw from '../img/thumbnails/flappyBird_bw.jpg';
+import movieTextModel_bw from '../img/thumbnails/movieTextModel_bw.jpg';
+import clothingPixelModel_bw from '../img/thumbnails/clothingPixelModel_bw.jpg';
+import vehicleKnnModel_bw from '../img/thumbnails/vehicleKnnModel_bw.jpg';
+import gradeRegressionModel_bw from '../img/thumbnails/gradeRegressionModel_bw.jpg';
+import cancerSvmModel_bw from '../img/thumbnails/cancerSvmModel_bw.jpg';
 
 function MyWorkScreen (props) {
-    const [work, setWork] = useState(project1);
+    const [work, setWork] = useState(indivisualWebsite_c);
 
     return <section className="mywork">
         <SectionBorder></SectionBorder>
         <div class="split right">
             <div className="content-scroll project-list">
-                <img src={(work === project0) ? project0 : project0_bw}
-                    onClick={() => setWork(project0)} 
+                <img src={(work === eCommerceWebsite_c) ? eCommerceWebsite_c : eCommerceWebsite_bw}
+                    onClick={() => setWork(eCommerceWebsite_c)} 
                     alt="E-Commerce Website" className="thumbnail_img"></img>
-                <img src={(work === project1) ? project1 : project1_bw}
-                    onClick={() => setWork(project1)}
+                <img src={(work === indivisualWebsite_c) ? indivisualWebsite_c : indivisualWebsite_bw}
+                    onClick={() => setWork(indivisualWebsite_c)} 
+                    alt="E-Commerce Website" className="thumbnail_img"></img>
+                <img src={(work === flappyBird_c) ? flappyBird_c : flappyBird_bw}
+                    onClick={() => setWork(flappyBird_c)}
                     alt="flappy bird AI" className="thumbnail_img"></img>
-                <img src={(work === project2) ? project2 : project2_bw}
-                    onClick={() => setWork(project2)}
+                <img src={(work === movieTextModel_c) ? movieTextModel_c : movieTextModel_bw}
+                    onClick={() => setWork(movieTextModel_c)}
                     alt="Pixel Clothing Classification" className="thumbnail_img"></img>
-                <img src={(work === project3) ? project3 : project3_bw}
-                    onClick={() => setWork(project3)}
+                <img src={(work === clothingPixelModel_c) ? clothingPixelModel_c : clothingPixelModel_bw}
+                    onClick={() => setWork(clothingPixelModel_c)}
                     alt="Vehicle Evaluator" className="thumbnail_img"></img>
-                <img src={(work === project4) ? project4 : project4_bw} 
-                    onClick={() => setWork(project4)}
+                <img src={(work === vehicleKnnModel_c) ? vehicleKnnModel_c : vehicleKnnModel_bw} 
+                    onClick={() => setWork(vehicleKnnModel_c)}
                     alt="SVM Cancer Assessment" className="thumbnail_img"></img>
-                <img src={(work === project5) ? project5 : project5_bw} 
-                    onClick={() => setWork(project5)}
+                <img src={(work === gradeRegressionModel_c) ? gradeRegressionModel_c : gradeRegressionModel_bw} 
+                    onClick={() => setWork(gradeRegressionModel_c)}
                     alt="Grade Predictor" className="thumbnail_img"></img>
-                <img src={(work === project6) ? project6: project6_bw} 
-                    onClick={() => setWork(project6)}
+                <img src={(work === cancerSvmModel_c) ? cancerSvmModel_c: cancerSvmModel_bw} 
+                    onClick={() => setWork(cancerSvmModel_c)}
                     alt="Movie Review Classification" className="thumbnail_img"></img>
             </div>
         </div>
         <div className="split left">
             <div className="centered">
-                {(work === project0) ? <Project0></Project0> : 
-                (work === project1) ? <Project1></Project1>:
-                <div>okok</div>}
+                <a href="#start-of-scroll">
+                    <div className="content-scroll-arrow" style={{marginRight:"3rem", marginBottom: "1rem"}}>
+                        <BsChevronUp/>
+                    </div>
+                </a>
+                {
+                    (work === eCommerceWebsite_c) ? <ECommerceWebsite></ECommerceWebsite> : 
+                    (work === flappyBird_c) ? <FlappyBird></FlappyBird>:
+                    (work === movieTextModel_c) ? <MovieTextModel></MovieTextModel>:
+                    (work === clothingPixelModel_c) ? <ClothingPixelModel></ClothingPixelModel>:
+                    (work === vehicleKnnModel_c) ? <VehicleKnnModel></VehicleKnnModel>:
+                    (work === gradeRegressionModel_c) ? <GradeRegressionModel></GradeRegressionModel>:
+                    (work === cancerSvmModel_c) ? <CancerSvmModel></CancerSvmModel>:
+                    (work === indivisualWebsite_c) ? <IndivisualWebsite></IndivisualWebsite>:
+                    <div>okok</div>
+                }
+                <a href="#end-of-scroll">
+                    <div className="content-scroll-arrow" style={{marginRight:"3rem", marginTop: "1.5rem"}}>
+                        <BsChevronDown/>
+                    </div>
+                </a>
             </div>
         </div>
     </section>

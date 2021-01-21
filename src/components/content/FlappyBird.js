@@ -1,14 +1,13 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
 
-import flappybird from '../../videos/project1/flappybird.mp4'
+import flappybird from '../../videos/flappyBird/flappybird.mp4'
 
-import mask from '../../img/projects/project1/mask.jpg';
+import mask from '../../img/projects/flappyBird/mask.jpg';
 
-function Project0 (props) {
+function FlappyBird (props) {
     return <div>
         <div className="content-scroll" style={{textAlign: "center", width:"80%"}}>
-            <p>
+            <p id="start-of-scroll">
                 "Flappy Bird" is a side-scrolling game released in 2013, 
                 where the player controls a bird, and attempts to fly between 
                 green pipes without hitting them.
@@ -166,12 +165,7 @@ function Project0 (props) {
             </p>
             <p className="space"></p>
         </div>
-        <a href="#end-of-scroll">
-            <div className="content-scroll-arrow" style={{marginRight:"3rem"}}>
-                <BsChevronDown/>
-            </div>
-        </a>
     </div>
 }
 
-export default Project0;
+export default FlappyBird;

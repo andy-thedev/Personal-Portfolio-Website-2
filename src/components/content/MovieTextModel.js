@@ -1,10 +1,9 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
 
-function Project6 (props) {
+function MovieTextModel (props) {
     return <div>
         <div className="content-scroll" style={{textAlign: "center", width:"80%"}}>
-            <p>
+            <p id="start-of-scroll">
                 Program: Python
             </p>
             <p>
@@ -60,12 +59,7 @@ function Project6 (props) {
                 README.md
             </p>
         </div>
-        <a href="#end-of-scroll">
-            <div className="content-scroll-arrow" style={{marginRight:"3rem"}}>
-                <BsChevronDown/>
-            </div>
-        </a>
     </div>
 }
 
-export default Project6;
+export default MovieTextModel;

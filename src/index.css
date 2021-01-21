@@ -233,6 +233,11 @@ code {
     background-image: url(img/background/skills.jpg);
   }
 
+  .skills .content-scroll .skill-list {
+    display: flex;
+    flex-direction: row;
+  }
+
 /* My Work Screen */
 
   .mywork {
@@ -241,11 +246,15 @@ code {
 
   .mywork .content-scroll.project-list{
     z-index: 100;
-    width: 25%;
+    width: 23%;
     height: 100%;
-    transform: translateX(220%);
+    transform: translateX(240%);
     text-align: center;
   }
+
+  /* .project-list::-webkit-scrollbar {
+    display: block;
+  } */
 
 /* Contact Screen */
 

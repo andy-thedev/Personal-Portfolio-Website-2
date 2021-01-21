@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { BsChevronUp } from 'react-icons/bs';
 import {BsChevronDown} from 'react-icons/bs';
 
 import SectionBorder from '../components/SectionBorder';
@@ -9,8 +10,13 @@ function AboutScreen (props) {
         <SectionBorder></SectionBorder>
         <div class="split right">
                 <div class="centered">
+                    <a href="#start-of-scroll">
+                        <div className="content-scroll-arrow" >
+                            <BsChevronUp/>
+                        </div>
+                    </a>
                     <div className="content-scroll">
-                        <p> 
+                        <p id="start-of-scroll"> 
                             Hi, I'm Andy Jung, <br/>
                             a software developer based in Toronto.
                         </p>
@@ -47,7 +53,7 @@ function AboutScreen (props) {
                         </p>
                     </div>
                     <a href="#end-of-scroll">
-                        <div className="content-scroll-arrow">
+                        <div className="content-scroll-arrow" style={{ marginTop: "0.5rem" }}>
                             <BsChevronDown/>
                         </div>
                     </a>

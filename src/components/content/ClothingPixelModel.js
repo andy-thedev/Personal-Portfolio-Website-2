@@ -1,10 +1,9 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
 
-function Project2 (props) {
+function ClothingPixelModel (props) {
     return <div>
         <div className="content-scroll" style={{textAlign: "center", width:"80%"}}>
-            <p>
+            <p className="start-of-scroll">
                 Program: Python
             </p>
             <p>
@@ -54,12 +53,7 @@ function Project2 (props) {
                 README.md
             </p>
         </div>
-        <a href="#end-of-scroll">
-            <div className="content-scroll-arrow" style={{marginRight:"3rem"}}>
-                <BsChevronDown/>
-            </div>
-        </a>
     </div>
 }
 
-export default Project2;
+export default ClothingPixelModel;

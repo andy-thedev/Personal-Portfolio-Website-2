@@ -1,24 +1,26 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
 
-import img0 from '../../img/projects/project0/img0.JPG';
-import img1 from '../../img/projects/project0/img1.JPG';
+import img0 from '../../img/projects/eCommerceWebsite/img0.JPG';
+import img1 from '../../img/projects/eCommerceWebsite/img1.JPG';
 
-import addToCart from '../../videos/project0/1add_to_cart.mp4'
-import login from '../../videos/project0/2login.mp4'
-import sort from '../../videos/project0/3sort.mp4'
-import create from '../../videos/project0/4create_product.mp4'
-import editDelete from '../../videos/project0/5edit_delete_product.mp4'
+import addToCart from '../../videos/eCommerceWebsite/1add_to_cart.mp4'
+import login from '../../videos/eCommerceWebsite/2login.mp4'
+import sort from '../../videos/eCommerceWebsite/3sort.mp4'
+import create from '../../videos/eCommerceWebsite/4create_product.mp4'
+import editDelete from '../../videos/eCommerceWebsite/5edit_delete_product.mp4'
 
-function Project0 (props) {
+function ECommerceWebsite (props) {
     return <div>
         <div className="content-scroll" style={{textAlign: "center", width:"80%"}}>
             <img src={img0} alt="sample code of the project" className="project_img"></img>
-            <p>
+            <p id="start-of-scroll">
                 This project demonstrates a fully functioning eCommerce website, 
                 utilizing the MERN (MongoDB, Express, React, Node) stack.
             </p>
             <img src={img1} alt="Sidebar component" className="project_img"></img>
+            <p>
+                <i>Above: Sort by category component</i>
+            </p>
             <p className="space">
                 Front-end: ReactJS, HTML, CSS, Redux<br/>
                 Back-end: NodeJS, ExpressJS<br/>
@@ -132,12 +134,7 @@ function Project0 (props) {
                 README.md
             </p>
         </div>
-        <a href="#end-of-scroll">
-            <div className="content-scroll-arrow" style={{marginRight:"3rem"}}>
-                <BsChevronDown/>
-            </div>
-        </a>
     </div>
 }
 
-export default Project0;
+export default ECommerceWebsite;
