@@ -4,9 +4,14 @@ import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 
 import SectionBorder from '../components/SectionBorder';
 
+import skills_center_strip from '../img/background/skills_center_strip.jpg';
+import skills_right_strip from '../img/background/skills_right_strip.jpg';
+
 function SkillsScreen (props) {
     return <section className="skills">
         <SectionBorder></SectionBorder>
+        <img src={skills_center_strip} alt="center strip" className="centered strip"></img>
+        <img src={skills_right_strip} alt="right strip" className="strip"></img>
         <div class="split left">
             <div class="centered">
                 <a href="#start-of-scroll">

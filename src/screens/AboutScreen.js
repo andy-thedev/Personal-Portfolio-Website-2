@@ -5,9 +5,14 @@ import {BsChevronDown} from 'react-icons/bs';
 
 import SectionBorder from '../components/SectionBorder';
 
+import about_center_strip from '../img/background/about_center_strip.jpg';
+import about_left_strip from '../img/background/about_left_strip.jpg';
+
 function AboutScreen (props) {
     return <section className="about">
         <SectionBorder></SectionBorder>
+        <img src={about_center_strip} alt="center strip" className="centered strip"></img>
+        <img src={about_left_strip} alt="left strip" className="strip"></img>
         <div class="split right">
                 <div class="centered">
                     <a href="#start-of-scroll">

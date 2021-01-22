@@ -5,6 +5,8 @@ import { BsChevronDown } from 'react-icons/bs';
 
 import SectionBorder from '../components/SectionBorder';
 
+import mywork_center_strip from '../img/background/mywork_center_strip.jpg';
+
 import IndivisualWebsite from '../components/content/IndivisualWebsite';
 import ECommerceWebsite from '../components/content/ECommerceWebsite';
 import FlappyBird from '../components/content/FlappyBird';
@@ -37,6 +39,7 @@ function MyWorkScreen (props) {
 
     return <section className="mywork">
         <SectionBorder></SectionBorder>
+        <img src={mywork_center_strip} alt="center strip" className="centered strip"></img>
         <div class="split right">
             <div className="content-scroll project-list">
                 <img src={(work === eCommerceWebsite_c) ? eCommerceWebsite_c : eCommerceWebsite_bw}

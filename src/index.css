@@ -43,8 +43,6 @@ code {
 
   section {
     height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
     /* Image Settings */
     background-repeat: no-repeat;
@@ -97,13 +95,7 @@ code {
 
 
   /* Rectangular border frame in background */
-  /* .section-border {
-    position: fixed;
-    width: calc(100% - 3rem);
-    height: calc(100% - 3rem);
-    border: 2px solid #000;
-  } */
-  .section-border-top{
+  .section-border-top {
     z-index: 100;
     position: fixed;
     left: 1.5rem;
@@ -112,7 +104,7 @@ code {
     border-bottom: 2px solid #000;
   }
 
-  .section-border-right{
+  .section-border-right {
     z-index: 100;
     position: fixed;
     right: 1.5rem;
@@ -121,7 +113,7 @@ code {
     border-right: 2px solid #000;
   }
 
-  .section-border-left{
+  .section-border-left {
     z-index: 100;
     position: fixed;
     left: 1.5rem;
@@ -130,13 +122,17 @@ code {
     border-left: 2px solid #000;
   }
 
-  .section-border-bottom{
+  .section-border-bottom {
     z-index: 100;
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
     width: calc(100% - 3rem);
     border-bottom: 2px solid #000;
+  }
+
+  .strip {
+    height: 100vh;
   }
 
   /* Split Screen Styling */
@@ -174,7 +170,7 @@ code {
     transform: translate(-50%, -50%);
   }
 
-/* Scroll Content */
+  /* Scroll Content */
   .content-scroll {
     width: 90%;
     height: 550px;
@@ -217,20 +213,18 @@ code {
 
 /* Home Screen */
 
-  .home {
-    background-image: url(img/background/home.jpg);
-  }
-
 /* About Screen */
 
   .about {
-    background-image: url(img/background/about.jpg);
+    display: flex;
+    justify-content: flex-start;
   }
 
 /* Skills Screen */
 
   .skills {
-    background-image: url(img/background/skills.jpg);
+    display: flex;
+    justify-content: flex-end;
   }
 
   .skills .content-scroll .skill-list {
@@ -241,7 +235,8 @@ code {
 /* My Work Screen */
 
   .mywork {
-    background-image: url(img/background/mywork.jpg);
+    display: flex;
+    justify-content: flex-end;
   }
 
   .mywork .content-scroll.project-list{
@@ -252,12 +247,15 @@ code {
     text-align: center;
   }
 
-  /* .project-list::-webkit-scrollbar {
-    display: block;
-  } */
-
 /* Contact Screen */
-
-  .contact {
-    background-image: url(img/background/contact.jpg);
+  .contact-link {
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--clr-dark);
+    padding: 25vh 5vw;
   }
+
+  .contact-link:hover {
+    color: var(--clr-accent);
+  }
+  
