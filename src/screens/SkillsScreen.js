@@ -1,6 +1,4 @@
 import React from 'react';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Redirect } from 'react-router-dom';
 
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 
@@ -14,7 +12,7 @@ function SkillsScreen (props) {
     return <section className="skills">
         <SectionBorder></SectionBorder>
         <img src={skills_center_strip} alt="center strip" className="centered strip"></img>
-        <img src={skills_right_strip} alt="right strip" className="strip"></img>
+        <img src={skills_right_strip} alt="right strip" className="side strip"></img>
         <div class="split" style={{left: "-1%"}}>
             <div class="centered">
                 <a href="#start-of-scroll">

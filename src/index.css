@@ -273,4 +273,21 @@ code {
   .contact-link:hover {
     color: var(--clr-accent);
   }
-  
+
+/* Screen Optimization */
+
+@media (max-width: 1919px ) {
+  .split, .side.strip{
+    display: none;
+  }
+
+  .centered.strip {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .centered.strip {
+    width: 100%;
+  }
+}

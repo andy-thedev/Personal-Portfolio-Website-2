@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 
 import SectionBorder from '../components/SectionBorder';
 

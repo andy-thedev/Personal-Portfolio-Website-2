@@ -12,7 +12,7 @@ function AboutScreen (props) {
     return <section className="about">
         <SectionBorder></SectionBorder>
         <img src={about_center_strip} alt="center strip" className="centered strip"></img>
-        <img src={about_left_strip} alt="left strip" className="strip"></img>
+        <img src={about_left_strip} alt="left strip" className="side strip"></img>
         <div class="split right">
                 <div class="centered">
                     <a href="#start-of-scroll">
