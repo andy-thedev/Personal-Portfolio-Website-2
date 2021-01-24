@@ -9,6 +9,7 @@ import mywork_center_strip from '../img/background/mywork_center_strip.jpg';
 
 import IndivisualWebsite from '../components/content/IndivisualWebsite';
 import ECommerceWebsite from '../components/content/ECommerceWebsite';
+import RestaurantWebsite from '../components/content/RestaurantWebsite';
 import FlappyBird from '../components/content/FlappyBird';
 import MovieTextModel from '../components/content/MovieTextModel';
 import ClothingPixelModel from '../components/content/ClothingPixelModel';
@@ -18,6 +19,7 @@ import CancerSvmModel from '../components/content/CancerSvmModel';
 
 import indivisualWebsite_c from '../img/thumbnails/indivisualWebsite_c.jpg';
 import eCommerceWebsite_c from '../img/thumbnails/eCommerceWebsite.jpg';
+import restaurantWebsite_c from '../img/thumbnails/restaurantWebsite_c.JPG';
 import flappyBird_c from '../img/thumbnails/flappyBird.jpg';
 import movieTextModel_c from '../img/thumbnails/movieTextModel.jpg';
 import clothingPixelModel_c from '../img/thumbnails/clothingPixelModel.jpg';
@@ -27,6 +29,7 @@ import cancerSvmModel_c from '../img/thumbnails/cancerSvmModel.jpg';
 
 import indivisualWebsite_bw from '../img/thumbnails/indivisualWebsite_bw.jpg';
 import eCommerceWebsite_bw from '../img/thumbnails/eCommerceWebsite_bw.jpg';
+import restaurantWebsite_bw from '../img/thumbnails/restaurantWebsite_bw.jpg';
 import flappyBird_bw from '../img/thumbnails/flappyBird_bw.jpg';
 import movieTextModel_bw from '../img/thumbnails/movieTextModel_bw.jpg';
 import clothingPixelModel_bw from '../img/thumbnails/clothingPixelModel_bw.jpg';
@@ -47,7 +50,10 @@ function MyWorkScreen (props) {
                     alt="E-Commerce Website" className="thumbnail_img"></img>
                 <img src={(work === indivisualWebsite_c) ? indivisualWebsite_c : indivisualWebsite_bw}
                     onClick={() => setWork(indivisualWebsite_c)} 
-                    alt="E-Commerce Website" className="thumbnail_img"></img>
+                    alt="Indivisual Website" className="thumbnail_img"></img>
+                <img src={(work === restaurantWebsite_c) ? restaurantWebsite_c : restaurantWebsite_bw}
+                    onClick={() => setWork(restaurantWebsite_c)} 
+                    alt="Indivisual Website" className="thumbnail_img"></img>
                 <img src={(work === flappyBird_c) ? flappyBird_c : flappyBird_bw}
                     onClick={() => setWork(flappyBird_c)}
                     alt="flappy bird AI" className="thumbnail_img"></img>
@@ -84,6 +90,7 @@ function MyWorkScreen (props) {
                     (work === gradeRegressionModel_c) ? <GradeRegressionModel></GradeRegressionModel>:
                     (work === cancerSvmModel_c) ? <CancerSvmModel></CancerSvmModel>:
                     (work === indivisualWebsite_c) ? <IndivisualWebsite></IndivisualWebsite>:
+                    (work === restaurantWebsite_c) ? <RestaurantWebsite></RestaurantWebsite>:
                     <div>okok</div>
                 }
                 <a href="#end-of-scroll">
