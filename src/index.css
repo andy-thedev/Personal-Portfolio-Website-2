@@ -6,7 +6,7 @@ code {
     monospace;
 }
 
-/* Custom Properties */
+/* Custom Properties------------------------------------------------------------------ */
 
   :root {
     /*font family*/
@@ -26,21 +26,7 @@ code {
     --fs-body: 1.25rem;
   }
 
-/* General Styles */
-
-  body {
-
-    /* Locks height of page and content to prevent 
-    page from extending past 100vh */
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    /* Typography */
-    font-family: var(--ff-body);
-    font-size: var(--fs-body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+/* General Styles--------------------------------------------------------------------- */
 
   @keyframes fadeInAnimation { 
     0% { 
@@ -48,11 +34,28 @@ code {
     } 
     100% { 
         opacity: 1; 
-     } 
-  } 
+    } 
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    /* Locks height of page and content to prevent 
+    page from extending past 100vh */
+    height: 100%;
+    overflow: hidden;
+    /* Typography */
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
   section {
-    animation: fadeInAnimation ease 0.1s;
+    animation: fadeInAnimation ease 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
@@ -71,12 +74,51 @@ code {
     font-size: var(--fs-h2);
   }
 
-  /* Spaces in between paragraph blocks */
+  /* Spaces in-between paragraph blocks */
   .space {
     padding-top: 3rem;
   }
 
-/* General Components */
+  /* Split Screen Styling */
+  .split {
+    /* If split class covers another element, add 
+    higher z-index to the element to change priority. */
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    overflow-x: hidden;
+    /* Hide scrollbar for IE/Edge and Firefox, respectively */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .split::-webkit-scrollbar {
+    display: none;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .strip {
+    height: 100vh;
+  }
+
+/* General Components----------------------------------------------------------------- */
 
   /* Navbar */
   .navbar {
@@ -145,47 +187,12 @@ code {
     border-bottom: 2px solid #000;
   }
 
-  .strip {
-    height: 100vh;
-  }
-
-  /* Split Screen Styling */
-  .split {
-    /* If split class covers another element, add 
-    higher z-index to the element to change priority. */
-    z-index: 1;
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    overflow-x: hidden;
-    /* Hide scrollbar for IE/Edge and Firefox, respectively */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .split::-webkit-scrollbar {
-    display: none;
-  }
-
-  .left {
-    left: 0;
-  }
-
-  .right {
-    right: 0;
-  }
-
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   /* Scroll Content */
   .content-scroll {
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
     width: 90%;
     height: 550px;
     margin: auto auto auto 1rem;
@@ -196,45 +203,79 @@ code {
     scroll-behavior: smooth;
   }
 
-  .content-scroll-arrow {
-    color: var(--clr-dark);
-    text-align: center;
-  }
-
   /* Hide scrollbar for Chrome, Safari and Opera */
   .content-scroll::-webkit-scrollbar {
     display: none;
   }
 
-  .thumbnail_img {
-    width: 90%;
-    transition: 
-    transform 100ms cubic-bezier(.5, 0, .5, 1),
-    opacity 250ms linear;
+  .content-scroll-arrow {
+    color: var(--clr-dark);
+    text-align: center;
   }
 
-  .thumbnail_img:hover{
-    transform: scale(1.2);
+  /* Modal Content */
+  .modal-background {
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) );
+    z-index: 999;
   }
 
-  .project_img, .project_video {
-    width: 100%;
+  .modal {
+
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    height: 800px;
+
+    /* Hide scrollbar for IE/Edge and Firefox, respectively */
+    /* -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth; */
   }
 
-  .project_video:hover, .project_video:focus {
-    outline: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* .modal::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* .close-modal-button {
+    color: #fff;
+    font-size: var(--fs-h2);
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    width: 10%;
+    height: 10%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+  } */
+
+  .modal_img {
+    width: 75%;
+    overflow: hidden;
   }
 
-/* Home Screen */
+/* Home Screen----------------------------------------------------------------------- */
 
-/* About Screen */
+/* About Screen---------------------------------------------------------------------- */
 
   .about {
     display: flex;
     justify-content: flex-start;
   }
 
-/* Skills Screen */
+/* Skills Screen--------------------------------------------------------------------- */
 
   .skills {
     display: flex;
@@ -247,7 +288,7 @@ code {
     text-align: right;
   }
 
-/* My Work Screen */
+/* My Work Screen--------------------------------------------------------------------- */
 
   .mywork {
     display: flex;
@@ -262,7 +303,28 @@ code {
     text-align: center;
   }
 
-/* Contact Screen */
+  .thumbnail_img {
+    width: 90%;
+    transition: transform 100ms cubic-bezier(.5, 0, .5, 1),
+      opacity 250ms linear;
+    cursor: pointer;
+  }
+
+  .thumbnail_img:hover{
+    transform: scale(1.2);
+  }
+
+  .project_img, .project_video {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .project_video:hover, .project_video:focus {
+    outline: none;
+  }
+
+/* Contact Screen--------------------------------------------------------------------- */
+  
   .contact-link {
     font-size: 3rem;
     text-decoration: none;
@@ -274,7 +336,7 @@ code {
     color: var(--clr-accent);
   }
 
-/* Screen Optimization */
+/* Screen Optimization---------------------------------------------------------------- */
 
 @media (max-width: 1919px ) {
   .split, .side.strip{
@@ -286,7 +348,7 @@ code {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
   .centered.strip {
     width: 100%;
   }

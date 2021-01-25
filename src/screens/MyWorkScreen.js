@@ -40,6 +40,19 @@ import cancerSvmModel_bw from '../img/thumbnails/cancerSvmModel_bw.jpg';
 function MyWorkScreen (props) {
     const [work, setWork] = useState(indivisualWebsite_c);
 
+    const [image, setImage] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const openModal = (img) => {
+        setImage(img);
+        setModalVisible(true);
+    }
+
+    const closeModal = (img) => {
+        setImage('');
+        setModalVisible(false);
+    }
+
     return <section className="mywork">
         <SectionBorder></SectionBorder>
         <img src={mywork_center_strip} alt="center strip" className="centered strip"></img>
@@ -89,8 +102,8 @@ function MyWorkScreen (props) {
                     (work === vehicleKnnModel_c) ? <VehicleKnnModel></VehicleKnnModel>:
                     (work === gradeRegressionModel_c) ? <GradeRegressionModel></GradeRegressionModel>:
                     (work === cancerSvmModel_c) ? <CancerSvmModel></CancerSvmModel>:
-                    (work === indivisualWebsite_c) ? <IndivisualWebsite></IndivisualWebsite>:
-                    (work === restaurantWebsite_c) ? <RestaurantWebsite></RestaurantWebsite>:
+                    (work === indivisualWebsite_c) ? <IndivisualWebsite openModal={openModal.bind(this)}></IndivisualWebsite>:
+                    (work === restaurantWebsite_c) ? <RestaurantWebsite openModal={openModal.bind(this)}></RestaurantWebsite>:
                     <div>okok</div>
                 }
                 <a href="#end-of-scroll">
@@ -100,6 +113,15 @@ function MyWorkScreen (props) {
                 </a>
             </div>
         </div>
+        {modalVisible && <div className="modal-background" onClick={() => closeModal()}>
+            <div className="modal">
+                <div className="modal-content" style={{display:"inline", textAlign:"center"}}>
+                    <img src={image} alt="sample code of the project" className="modal_img"></img>
+                </div>
+            </div>
+            {/* <button className="close-modal-button" 
+            onClick={() => closeModal()}>X</button> */}
+            </div>}
     </section>
 }
 
