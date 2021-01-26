@@ -95,8 +95,8 @@ function MyWorkScreen (props) {
                     </div>
                 </a>
                 {
-                    (work === eCommerceWebsite_c) ? <ECommerceWebsite></ECommerceWebsite> : 
-                    (work === flappyBird_c) ? <FlappyBird></FlappyBird>:
+                    (work === eCommerceWebsite_c) ? <ECommerceWebsite openModal={openModal.bind(this)}></ECommerceWebsite> : 
+                    (work === flappyBird_c) ? <FlappyBird openModal={openModal.bind(this)}></FlappyBird>:
                     (work === movieTextModel_c) ? <MovieTextModel></MovieTextModel>:
                     (work === clothingPixelModel_c) ? <ClothingPixelModel></ClothingPixelModel>:
                     (work === vehicleKnnModel_c) ? <VehicleKnnModel></VehicleKnnModel>:

@@ -12,12 +12,14 @@ import editDelete from '../../videos/eCommerceWebsite/5edit_delete_product.mp4'
 function ECommerceWebsite (props) {
     return <div>
         <div className="content-scroll" style={{textAlign: "center", width:"80%"}}>
-            <img src={img0} alt="sample code of the project" className="project_img"></img>
+            <img src={img0} alt="sample code of the project" className="project_img"
+                onClick={() => props.openModal(img0)}></img>
             <p id="start-of-scroll">
                 This project demonstrates a fully functioning eCommerce website, 
                 utilizing the MERN (MongoDB, Express, React, Node) stack.
             </p>
-            <img src={img1} alt="Sidebar component" className="project_img"></img>
+            <img src={img1} alt="Sidebar component" className="project_img"
+                onClick={() => props.openModal(img1)}></img>
             <p>
                 <i>Above: Sort by category component</i>
             </p>

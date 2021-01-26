@@ -64,7 +64,8 @@ function FlappyBird (props) {
                 overlap examinations between the bird, and its surrounding objects. In this
                 manner, we are able to precisely detect collision, if one does occur.
             </p>
-            <img src={mask} alt="sample code of the project" className="project_img"></img>
+            <img src={mask} alt="sample code of the project" className="project_img"
+                onClick={() => props.openModal(mask)}></img>
             <p>
                 Collision with the sky and base can simply be calculated by addressing the bird's current
                 y-coordinate. However, pipes, that are generated with random heights, continuously require 
