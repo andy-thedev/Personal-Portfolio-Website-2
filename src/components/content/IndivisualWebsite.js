@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import img0 from '../../img/projects/indivisualWebsite/img0.jpg';
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -12,12 +13,13 @@ code {
     /*font family*/
     --ff-body: 'Markazi Text', serif;
     --ff-btn: 'Bodoni Moda', serif;
+    --ff-krn: 'Noto Sans KR', sans-serif;
     /*font weight*/
     --fw-reg: 400;
     --fw-bold: 700;
     /*colour*/
     --clr-light: #fff;
-    --clr-neutral: #606060;
+    --clr-neutral: #505050;
     --clr-dark: #303030;
     --clr-accent: #ff0000;
     /*font size*/
@@ -70,8 +72,17 @@ code {
     -o-background-size:cover;
   }
 
+  button:hover, button:focus{
+    outline:none;
+  }
+
   h1 {
     font-size: var(--fs-h2);
+  }
+
+  .korean {
+    font-family: var(--ff-krn);
+    font-size: 0.9rem;
   }
 
   /* Spaces in-between paragraph blocks */
@@ -130,9 +141,22 @@ code {
     right: 3rem;
   }
 
+  .nav-toggle {
+    color: var(--clr-neutral);
+    font-size: 2rem;
+    padding: 1rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
   .navbar-link {
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
     font-family: var(--ff-btn);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1.5rem;
   }
@@ -221,7 +245,7 @@ code {
 
     width: 100vw;
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) );
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
     z-index: 999;
   }
 
@@ -234,33 +258,44 @@ code {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: auto;
-    width: 100%;
-    height: 800px;
-
-    /* Hide scrollbar for IE/Edge and Firefox, respectively */
-    /* -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth; */
+    width: 70%;
+    height:85%;
   }
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  /* .modal::-webkit-scrollbar {
-    display: none;
-  } */
-
-  /* .close-modal-button {
+  .close-modal-button {
     color: #fff;
-    font-size: var(--fs-h2);
+    font-size: var(--fs-body);
     position: absolute;
-    top: 5%;
-    right: 25%;
-    width: 10%;
-    height: 10%;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 1rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
     z-index: 1000;
-  } */
+  }
+
+  .modal.mobile {
+    height: 75%;
+    /* Hide scrollbar for IE/Edge and Firefox, respectively */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .modal.mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-content {
+    color: #fff;
+    display: inline;
+    text-align: center;
+  }
+
+  .modal-content.mobile {
+    width: 100%;
+  }
 
   .modal_img {
     width: 85%;
@@ -350,6 +385,10 @@ code {
 }
 
 @media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+
   .centered.strip {
     width: 100%;
   }

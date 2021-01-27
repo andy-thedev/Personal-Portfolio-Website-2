@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import { BsChevronUp } from 'react-icons/bs';
-import { BsChevronDown } from 'react-icons/bs';
+import { useSwipeable } from 'react-swipeable';
+import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 
 import SectionBorder from '../components/SectionBorder';
 
@@ -43,6 +43,11 @@ function MyWorkScreen (props) {
     const [image, setImage] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
 
+    const swipeHandler = useSwipeable({
+        onSwipedDown: () => props.history.push("/skills"),
+        onSwipedUp: () => props.history.push("/contact")
+    })
+
     const openModal = (img) => {
         setImage(img);
         setModalVisible(true);
@@ -55,8 +60,8 @@ function MyWorkScreen (props) {
 
     return <section className="mywork">
         <SectionBorder></SectionBorder>
-        <img src={mywork_center_strip} alt="center strip" className="centered strip"></img>
-        <div class="split right">
+        <img {...swipeHandler} src={mywork_center_strip} alt="center strip" className="centered strip"></img>
+        <div className="split right">
             <div className="content-scroll project-list">
                 <img src={(work === eCommerceWebsite_c) ? eCommerceWebsite_c : eCommerceWebsite_bw}
                     onClick={() => setWork(eCommerceWebsite_c)} 
@@ -90,7 +95,7 @@ function MyWorkScreen (props) {
         <div className="split left">
             <div className="centered">
                 <a href="#start-of-scroll">
-                    <div className="content-scroll-arrow" style={{marginRight:"3rem", marginBottom: "1rem"}}>
+                    <div className="content-scroll-arrow" style={{marginRight:"4rem", marginBottom: "1rem"}}>
                         <BsChevronUp/>
                     </div>
                 </a>
@@ -107,15 +112,15 @@ function MyWorkScreen (props) {
                     <div>okok</div>
                 }
                 <a href="#end-of-scroll">
-                    <div className="content-scroll-arrow" style={{marginRight:"3rem", marginTop: "1.5rem"}}>
+                    <div className="content-scroll-arrow" style={{marginRight:"4rem", marginTop: "1.5rem"}}>
                         <BsChevronDown/>
                     </div>
                 </a>
             </div>
         </div>
-        {modalVisible && <div className="modal-background" onClick={() => closeModal()}>
+        {modalVisible && <div onClick={() => closeModal()} className="modal-background">
             <div className="modal">
-                <div className="modal-content" style={{display:"inline", textAlign:"center"}}>
+                <div className="modal-content">
                     <img src={image} alt="sample code of the project" className="modal_img"></img>
                 </div>
             </div>
