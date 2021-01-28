@@ -9,7 +9,7 @@ function NavigationBar (props) {
 
     return <div className="navbar">
         {navVisible ? 
-            <>
+            <div className="animated">
                 <button onClick={() => setNavVisible(false)} className="nav-toggle">
                     <AiOutlineMenu/>
                 </button>
@@ -28,7 +28,7 @@ function NavigationBar (props) {
                 <div onClick={() => setNavVisible(false)} className="navbar-link">
                     <Link to="/contact">C</Link>
                 </div>
-            </> :
+            </div> :
             <button onClick={() => setNavVisible(true)} className="nav-toggle">
                 <AiOutlineMenu/>
             </button>

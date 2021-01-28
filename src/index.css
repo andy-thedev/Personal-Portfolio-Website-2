@@ -57,10 +57,6 @@ code {
   }
 
   section {
-    animation: fadeInAnimation ease 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
     height: 100vh;
     align-items: center;
     /* Image Settings */
@@ -129,6 +125,12 @@ code {
     height: 100vh;
   }
 
+  .animated { 
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
 /* General Components----------------------------------------------------------------- */
 
   /* Navbar */
@@ -151,10 +153,6 @@ code {
   }
 
   .navbar-link {
-    animation: fadeInAnimation ease 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
     font-family: var(--ff-btn);
     font-size: 1.75rem;
     text-align: center;
@@ -213,10 +211,6 @@ code {
 
   /* Scroll Content */
   .content-scroll {
-    animation: fadeInAnimation ease 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
     width: 90%;
     height: 550px;
     margin: auto auto auto 1rem;
@@ -239,10 +233,6 @@ code {
 
   /* Modal Content */
   .modal-background {
-    animation: fadeInAnimation ease 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
     width: 100vw;
     height: 100vh;
     background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
@@ -272,7 +262,7 @@ code {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .modal.mobile {
@@ -289,7 +279,6 @@ code {
 
   .modal-content {
     color: #fff;
-    display: inline;
     text-align: center;
   }
 
@@ -346,8 +335,12 @@ code {
     cursor: pointer;
   }
 
+  .thumbnail_img.mobile:hover {
+    transform: none;
+  }
+
   .thumbnail_img:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
 
   .project_img, .project_video {
@@ -360,7 +353,7 @@ code {
   }
 
 /* Contact Screen--------------------------------------------------------------------- */
-  
+
   .contact-link {
     font-size: 3rem;
     text-decoration: none;
@@ -370,6 +363,18 @@ code {
 
   .contact-link:hover {
     color: var(--clr-accent);
+  }
+
+  .contact .modal-content.mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contact .mobile {
+    color: var(--clr-light);
+    padding: 15vh 5vw;
   }
 
 /* Screen Optimization---------------------------------------------------------------- */
