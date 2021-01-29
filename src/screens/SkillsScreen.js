@@ -110,9 +110,10 @@ function SkillsScreen (props) {
                             <p className="space">
                                 <small className="korean">
                                     머신러닝:<br/>
-                                    텐서플로우, 케라스,<br/>
-                                    Sklearn, 판다스,<br/>
-                                    넘파이,<br/>
+                                    텐서플로우, <br/>
+                                    케라스,<br/>
+                                    Sklearn, <br/>
+                                    판다스, 넘파이,<br/>
                                     주피터 노트북
                                 </small>
                             </p>

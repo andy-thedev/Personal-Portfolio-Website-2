@@ -116,14 +116,14 @@ function MyWorkScreen (props) {
                     alt="Movie Review Classification" className="thumbnail_img"/>
             </div>
         </div>
-        <div className="split left">
-            <div className="centered">
+        <div className="split" style={{left:"-1%"}}>
+            <div className="centered style">
                 <a href="#start-of-scroll">
                     <div className="content-scroll-arrow" style={{marginRight:"1.5rem", marginBottom: "1rem"}}>
                         <BsChevronUp/>
                     </div>
                 </a>
-                <div className="content-scroll animated" style={{textAlign: "center", height:"600px"}}>
+                <div className="content-scroll animated" style={{textAlign: "center"}}>
                     {
                         (work === eCommerceWebsite_c) ? <ECommerceWebsite openModal={openModal.bind(this)}/> : 
                         (work === flappyBird_c) ? <FlappyBird openModal={openModal.bind(this)}/>:
