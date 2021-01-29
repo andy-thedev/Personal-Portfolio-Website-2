@@ -11,6 +11,9 @@ import SectionBorder from '../components/SectionBorder';
 import about_center_strip from '../img/background/about_center_strip.jpg';
 import about_left_strip from '../img/background/about_left_strip.jpg';
 
+import signature from '../img/signature.png';
+import signature_black from '../img/signature_black.png';
+
 function AboutScreen (props) {
     const [mobileModalVisible, setMobileModalVisible] = useState(false);
 
@@ -56,6 +59,7 @@ function AboutScreen (props) {
                         I seek to become an irreplaceable programmer that considers perfection in
                         both front, and back ends of every final product.
                     </p>
+                    <img src={signature} alt="andy jung's signature" style={{ width: "100%" }}/>
                 </div>
                 <a href="#end-of-scroll">
                     <div className="content-scroll-arrow" style={{ marginTop: "0.5rem" }}>
@@ -78,16 +82,11 @@ function AboutScreen (props) {
                     </p>
                     <p className="space">
                         After practising theoretical studies in university, it was in my best interest to
-                        gain practical, applicative abilities that could turn abstract ideas into working products.
-                        This was not only the next natural step, but the very reason for the
-                        beginning of my coding career.
+                        gain practical, applicative abilities that could turn my abstract ideas into working products.
+                        So naturally, I began practising web development.
                     </p>
                     <p className="space">
-                        This did not only mean perfection in optimization through technical means. My obsession for
-                        optimal design and aesthetics have always driven my intentions in the mind of the user.
-                    </p>
-                    <p className="space">
-                        My main priority is to program in efficient, well-structured, working means. However, I also believe
+                        In any project, my first priority is to program in efficient, well-structured, working means. However, I believe
                         considering both sides of the underlying, and visual spectrums provide a better understanding of the overall project,
                         allowing myself to be a better working gear in any collaborative environment.
                     </p>
@@ -97,6 +96,7 @@ function AboutScreen (props) {
                         I seek to become an irreplaceable programmer that considers perfection in
                         both front, and back ends of every final product.
                     </p>
+                    <img src={signature_black} alt="andy jung's signature" style={{ width: "100%", marginTop: "2rem" }}/>
                 </div>
             </div>
         </div>}

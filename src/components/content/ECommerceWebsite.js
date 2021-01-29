@@ -1,7 +1,7 @@
 import React from 'react';
 
-import img0 from '../../img/projects/eCommerceWebsite/img0.JPG';
-import img1 from '../../img/projects/eCommerceWebsite/img1.JPG';
+import img0 from '../../img/projects/eCommerceWebsite/img0.jpg';
+import img1 from '../../img/projects/eCommerceWebsite/img1.jpg';
 
 import addToCart from '../../videos/eCommerceWebsite/1add_to_cart.mp4'
 import login from '../../videos/eCommerceWebsite/2login.mp4'
