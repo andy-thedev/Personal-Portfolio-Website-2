@@ -42,6 +42,7 @@ import cancerSvmModel_bw from '../img/thumbnails/cancerSvmModel_bw.jpg';
 import oldPersonalPortfolio_bw from '../img/thumbnails/oldPersonalPortfolio_bw.jpg';
 
 function MyWorkScreen (props) {
+
     const [work, setWork] = useState(indivisualWebsite_c);
 
     const [image, setImage] = useState('');
@@ -52,8 +53,7 @@ function MyWorkScreen (props) {
 
     const swipeHandler = useSwipeable({
         onSwipedDown: () => props.history.push("/skills"),
-        onSwipedUp: () => props.history.push("/contact"),
-        onTap: () => setMobileModalVisible(true)
+        onSwipedUp: () => props.history.push("/contact")
     })
 
     const openMobileModalWork = (work) => {
@@ -81,7 +81,8 @@ function MyWorkScreen (props) {
 
     return <section className="mywork animated">
         <SectionBorder/>
-        <img {...swipeHandler} src={mywork_center_strip} alt="center strip" className="centered strip"/>
+        <img {...swipeHandler} src={mywork_center_strip} alt="center strip" className="centered strip"
+            onClick={() => setMobileModalVisible(true)}/>
         <div className="split right">
             <div className="content-scroll project-list animated">
                 <img src={(work === eCommerceWebsite_c) ? eCommerceWebsite_c : eCommerceWebsite_bw}
@@ -151,7 +152,73 @@ function MyWorkScreen (props) {
                 </div>
             </div>
         </div>}
-        {mobileModalVisible ? 
+        {mobileModalVisible && 
+            <>
+                {
+                    mobileModalWorkVisible ? <button onClick={() => closeMobileModalWork()} className="close-modal-button" style={{color:"#ff0000"}}><VscEyeClosed/></button>:
+                    <button onClick={() => setMobileModalVisible(false)} className="close-modal-button"><VscEyeClosed/></button>
+                }
+                {
+                    mobileModalWorkVisible ? 
+                        <div className="modal-background animated">
+                            <div className="modal mobile">
+                                <div className="modal-content mobile">
+                                    {
+                                        (work === eCommerceWebsite_c) ? <ECommerceWebsite openModal={dummyHandler.bind(this)}/> : 
+                                        (work === flappyBird_c) ? <FlappyBird openModal={dummyHandler.bind(this)}/>:
+                                        (work === movieTextModel_c) ? <MovieTextModel/>:
+                                        (work === clothingPixelModel_c) ? <ClothingPixelModel/>:
+                                        (work === vehicleKnnModel_c) ? <VehicleKnnModel/>:
+                                        (work === gradeRegressionModel_c) ? <GradeRegressionModel/>:
+                                        (work === cancerSvmModel_c) ? <CancerSvmModel/>:
+                                        (work === indivisualWebsite_c) ? <IndivisualWebsite openModal={dummyHandler.bind(this)}/>:
+                                        (work === restaurantWebsite_c) ? <RestaurantWebsite openModal={dummyHandler.bind(this)}/>:
+                                        (work === oldPersonalPortfolio_c) ? <OldPersonalPortfolio openModal={dummyHandler.bind(this)}/>:''
+                                    }
+                                </div>
+                            </div>
+                        </div> :
+                            <div className="modal-background animated">
+                                <div className="modal mobile">
+                                    <div className="modal-content mobile">
+                                        <img src={eCommerceWebsite_c}
+                                            onClick={() => openMobileModalWork(eCommerceWebsite_c)}
+                                            alt="E-Commerce Website" className="thumbnail_img mobile"/>
+                                        <img src={indivisualWebsite_c}
+                                            onClick={() => openMobileModalWork(indivisualWebsite_c)} 
+                                            alt="Indivisual Website" className="thumbnail_img mobile"/>
+                                        <img src={restaurantWebsite_c}
+                                            onClick={() => openMobileModalWork(restaurantWebsite_c)} 
+                                            alt="Restaurant Website" className="thumbnail_img mobile"/>
+                                        <img src={oldPersonalPortfolio_c} 
+                                            onClick={() => openMobileModalWork(oldPersonalPortfolio_c)}
+                                            alt="Old Personal Portfolio" className="thumbnail_img mobile"/>
+                                        <img src={flappyBird_c}
+                                            onClick={() => openMobileModalWork(flappyBird_c)}
+                                            alt="flappy bird AI" className="thumbnail_img mobile"/>
+                                        <img src={movieTextModel_c}
+                                            onClick={() => openMobileModalWork(movieTextModel_c)}
+                                            alt="Pixel Clothing Classification" className="thumbnail_img mobile"/>
+                                        <img src={clothingPixelModel_c}
+                                            onClick={() => openMobileModalWork(clothingPixelModel_c)}
+                                            alt="Vehicle Evaluator" className="thumbnail_img mobile"/>
+                                        <img src={vehicleKnnModel_c} 
+                                            onClick={() => openMobileModalWork(vehicleKnnModel_c)}
+                                            alt="SVM Cancer Assessment" className="thumbnail_img mobile"/>
+                                        <img src={gradeRegressionModel_c} 
+                                            onClick={() => openMobileModalWork(gradeRegressionModel_c)}
+                                            alt="Grade Predictor" className="thumbnail_img mobile"/>
+                                        <img src={cancerSvmModel_c}
+                                            onClick={() => openMobileModalWork(cancerSvmModel_c)}
+                                            alt="Movie Review Classification" className="thumbnail_img mobile"/>
+                                    </div>
+                                </div>
+                            </div>  
+                }
+            </>
+
+        }
+        {/* {mobileModalVisible &&
             <div className="modal-background animated">
                 {
                     mobileModalWorkVisible ? <button onClick={() => closeMobileModalWork()} className="close-modal-button" style={{color:"#ff0000"}}><VscEyeClosed/></button>:
@@ -202,14 +269,14 @@ function MyWorkScreen (props) {
                             <img src={gradeRegressionModel_c} 
                                 onClick={() => openMobileModalWork(gradeRegressionModel_c)}
                                 alt="Grade Predictor" className="thumbnail_img mobile"/>
-                            <img src={cancerSvmModel_c} 
+                            <img src={cancerSvmModel_c}
                                 onClick={() => openMobileModalWork(cancerSvmModel_c)}
                                 alt="Movie Review Classification" className="thumbnail_img mobile"/>
                         </>  
                     }</div>
                 </div>
-            </div> : ''
-        }
+            </div>
+        } */}
     </section>
 }
 

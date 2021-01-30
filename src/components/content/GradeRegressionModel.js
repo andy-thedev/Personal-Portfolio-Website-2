@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function GradeRegressionModel (props) {
-    return <div className="animated">
+    const top = useRef(null);
+
+    useEffect(() => {
+        top.current.scrollIntoView();
+    })
+
+    return <div className="animated" ref={top}>
         <p id="start-of-scroll">
             Program: Python
         </p>

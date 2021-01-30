@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import img0 from '../../img/projects/indivisualWebsite/img0.jpg';
 
 function IndivisualWebsite (props) {
-    return <div className="animated">
+    const top = useRef(null);
+
+    useEffect(() => {
+        top.current.scrollIntoView();
+    })
+
+    return <div className="animated" ref={top}>
         <p id="start-of-scroll">
             <a href="https://www.indivisualiv.com" target="_blank" rel="noopener noreferrer">www.indivisualiv.com</a>
         </p>

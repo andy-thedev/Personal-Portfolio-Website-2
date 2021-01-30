@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function ClothingPixelModel (props) {
-    return <div className="animated">
+    const top = useRef(null);
+
+    useEffect(() => {
+        top.current.scrollIntoView();
+    })
+
+    return <div className="animated" ref={top}>
         <p className="start-of-scroll">
             Program: Python
         </p>

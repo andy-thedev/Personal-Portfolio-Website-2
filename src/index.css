@@ -32,7 +32,7 @@ code {
 
   @keyframes fadeInAnimation { 
     0% { 
-        opacity: 0; 
+        opacity: 0.5; 
     } 
     100% { 
         opacity: 1; 
@@ -127,7 +127,7 @@ code {
   }
 
   .animated { 
-    animation: fadeInAnimation ease 0.2s;
+    animation: fadeInAnimation ease 0.4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
@@ -268,6 +268,7 @@ code {
 
   .modal.mobile {
     height: 75%;
+    width: 75%;
     /* Hide scrollbar for IE/Edge and Firefox, respectively */
     -ms-overflow-style: none;
     scrollbar-width: none;

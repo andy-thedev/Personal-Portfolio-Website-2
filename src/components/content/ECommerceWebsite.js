@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import img0 from '../../img/projects/eCommerceWebsite/img0.jpg';
 import img1 from '../../img/projects/eCommerceWebsite/img1.jpg';
@@ -10,7 +10,13 @@ import create from '../../videos/eCommerceWebsite/4create_product.mp4'
 import editDelete from '../../videos/eCommerceWebsite/5edit_delete_product.mp4'
 
 function ECommerceWebsite (props) {
-    return <div className="animated">
+    const top = useRef(null);
+
+    useEffect(() => {
+        top.current.scrollIntoView();
+    })
+
+    return <div className="animated" ref={top}>
         <img src={img0} id="start-of-scroll" className="project_img" alt="sample code of the project"
             onClick={() => props.openModal(img0)}/>
         <p>

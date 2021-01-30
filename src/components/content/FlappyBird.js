@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import flappybird from '../../videos/flappyBird/flappybird.mp4'
 
 import mask from '../../img/projects/flappyBird/mask.jpg';
 
 function FlappyBird (props) {
-    return <div className="animated">
+    const top = useRef(null);
+
+    useEffect(() => {
+        top.current.scrollIntoView();
+    })
+
+    return <div className="animated" ref={top}>
         <p id="start-of-scroll">
             "Flappy Bird" is a side-scrolling game released in 2013, 
             where the player controls a bird, and attempts to fly between 
