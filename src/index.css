@@ -127,7 +127,7 @@ code {
   }
 
   .animated { 
-    animation: fadeInAnimation ease 0.4s;
+    animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
@@ -282,6 +282,10 @@ code {
   .modal-content {
     color: #fff;
     text-align: center;
+  }
+
+  .modal-content a{
+    color: #fff;
   }
 
   .modal-content.mobile {
