@@ -77,6 +77,10 @@ code {
     font-size: var(--fs-h2);
   }
 
+  a {
+    color: var(--clr-dark);
+  }
+
   .korean {
     font-family: var(--ff-krn);
     font-size: 0.9rem;
@@ -127,7 +131,7 @@ code {
   }
 
   .animated { 
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 0.8s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
@@ -236,7 +240,7 @@ code {
   .modal-background {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
+    background: linear-gradient( rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95) );
     z-index: 999;
   }
 
