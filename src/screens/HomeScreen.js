@@ -26,23 +26,20 @@ function HomeScreen (props) {
             <button onClick={() => setMobileModalVisible(false)} className="close-modal-button"><VscEyeClosed/></button>
             <div className="modal mobile" style={{alignItems: "center"}}>
                 <div className="modal-content mobile">
-                    <h1 id="start-of-scroll">
-                        WELCOME
-                    </h1>
-                    <h1 style={{paddingTop: "0.5rem"}}> 
+                    <h2 style={{paddingTop: "0.5rem"}}> 
                         <BsChevronUp/>
-                    </h1>
-                    <h1>
+                    </h2>
+                    <h2>
                         Swipe Up/Down <br/>
                         to Navigate
-                    </h1>
-                    <h1>
-                    <BsChevronDown/>
-                    </h1>
-                    <h1 id="end-of-scroll" style={{paddingTop: "0.5rem"}}>
+                    </h2>
+                    <h2>
+                        <BsChevronDown/>
+                    </h2>
+                    <h2 id="end-of-scroll" style={{paddingTop: "0.5rem"}}>
                         Tap to Reveal <br/>
-                        Contents
-                    </h1>
+                        Content
+                    </h2>
                 </div>
             </div>
         </div>}
