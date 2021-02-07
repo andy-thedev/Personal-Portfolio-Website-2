@@ -34,7 +34,7 @@ function SkillsScreen (props) {
                         <div>
                             <p>
                                 Language:<br/>
-                                Python, Java, R
+                                Python, Java
                             </p>
                             <p className="space">
                                 Front End:<br/>
@@ -60,9 +60,10 @@ function SkillsScreen (props) {
                             </p>
                             <p className="space">
                                 Machine Learning:<br/>
-                                TensorFlow, Keras,<br/>
-                                Sklearn, Pandas,<br/>
-                                Numpy,<br/>
+                                TensorFlow, <br/>
+                                Keras,<br/>
+                                Sklearn, <br/>
+                                Pandas, Numpy,<br/>
                                 Jupyter Notebook
                             </p>
                             <p className="space">
@@ -74,7 +75,7 @@ function SkillsScreen (props) {
                             <p>
                                 <small className="korean">
                                     언어:<br/>
-                                    파이쏜, 자바, R
+                                    파이쏜, 자바
                                 </small>
                             </p>
                             <p className="space">
