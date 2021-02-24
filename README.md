@@ -13,7 +13,7 @@ The reuseable parts of a screen, such as the navigation "bar", and the black sec
 The visual implementations of pages, such as the homepage, about page, skills page, etc.
 
 **/img , /videos:**  
-Media utilized in the application
+Media utilized in the website
 
 **App.js:**  
 The main container component for all other components, such as screens
