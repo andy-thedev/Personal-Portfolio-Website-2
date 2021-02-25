@@ -20,8 +20,8 @@ function ECommerceWebsite (props) {
         <img src={img0} id="start-of-scroll" className="project_img" alt="sample code of the project"
             onClick={() => props.openModal(img0)}/>
         <p>
-            This project demonstrates a fully functioning eCommerce website, 
-            utilizing the MERN (MongoDB, Express, React, Node) stack.
+            This project demonstrates a fully functioning eCommerce Streetwear 
+            Retailer website, utilizing the MERN (MongoDB, Express, React, Node) stack.
         </p>
         <img src={img1} className="project_img" alt="Sidebar component"
             onClick={() => props.openModal(img1)}/>
@@ -129,16 +129,7 @@ function ECommerceWebsite (props) {
             Code and documentation:
         </p>
         <p>
-            <a href="https://github.com/dnjsxo1860/KNN-Vehicle-Evaluation" target="_blank" rel="noopener noreferrer">In this Github link</a>
-        </p>
-        <p>
-            Detailed explanations:<br/>
-            KNN.py<br/> 
-            (above each line of code)
-        </p>
-        <p>
-            Table of Contents:<br/>
-            README.md
+            <a href="https://github.com/andy-thedev/Streetwear-Retailer-Website" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
     </div>
 }

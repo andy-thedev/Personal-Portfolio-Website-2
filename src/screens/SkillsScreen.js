@@ -15,7 +15,7 @@ function SkillsScreen (props) {
     const swipeHandler = useSwipeable({
         onSwipedDown: () => props.history.push("/about"),
         onSwipedUp: () => props.history.push("/mywork"),
-        onTap: () => setMobileModalVisible(true)
+        onTap: () => setMobileModalVisible(true),
     })
 
     return <section className="skills animated">
@@ -32,7 +32,7 @@ function SkillsScreen (props) {
                 <div className="content-scroll animated">
                     <div className="skill-list">
                         <div>
-                            <p>
+                            <p id="start-of-scroll">
                                 Language:<br/>
                                 Python, Java
                             </p>
@@ -118,7 +118,7 @@ function SkillsScreen (props) {
                                     주피터 노트북
                                 </small>
                             </p>
-                            <p className="space">
+                            <p className="space" id="end-of-scroll">
                                 <small className="korean">
                                     디자인 (아도비):<br/>
                                     포토샵/일러스트레이터

@@ -14,7 +14,7 @@ function ContactScreen (props) {
     const swipeHandler = useSwipeable({
         onSwipedDown: () => props.history.push("/mywork"),
         onSwipedUp: () => props.history.push("/"),
-        onTap: () => setMobileModalVisible(true)
+        onTap: () => setMobileModalVisible(true),
     })
 
     return <section className="contact animated">
@@ -29,7 +29,7 @@ function ContactScreen (props) {
         </div>
         <div className="split" style={{right: "-5%"}}>
             <div className="centered">
-                <a href="https://github.com/dnjsxo1860" className="contact-link">
+                <a href="https://github.com/andy-thedev" className="contact-link">
                     GITHUB
                 </a>
             </div>
@@ -41,7 +41,7 @@ function ContactScreen (props) {
                     <a href="https://www.linkedin.com/in/won-tae-jung/" className="contact-link mobile">
                         LINKEDIN
                     </a>
-                    <a href="https://github.com/dnjsxo1860" className="contact-link mobile">
+                    <a href="https://github.com/andy-thedev" className="contact-link mobile">
                         GITHUB
                     </a>
                 </div>

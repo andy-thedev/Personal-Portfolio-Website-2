@@ -47,15 +47,6 @@ function GradeRegressionModel (props) {
         <p>
             <a href="https://github.com/dnjsxo1860/Linear-Regression-Grade-Predictor" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
-        <p>
-            Detailed explanations:<br/>
-            Regression1.py<br/> 
-            (above each line of code)
-        </p>
-        <p>
-            Table of Contents:<br/>
-            README.md
-        </p>
     </div>
 }
 

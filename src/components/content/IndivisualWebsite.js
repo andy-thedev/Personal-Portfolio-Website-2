@@ -15,9 +15,18 @@ function IndivisualWebsite (props) {
         </p>
         <img src={img0} alt="sample code of the project" className="project_img"
             onClick={() => props.openModal(img0)}/>
-        <p className="space" id="end-of-scroll">
+        <p className="space">
             Frontend:<br/>
             HTML, CSS, BootStrap, JS, JQuery
+        </p>
+        <h2 className="space">
+            More info:
+        </h2>
+        <p id="end-of-scroll">
+            Code and documentation:
+        </p>
+        <p>
+            <a href="https://github.com/andy-thedev/IV-Website-Template" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
     </div>
 }

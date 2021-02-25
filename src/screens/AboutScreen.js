@@ -20,7 +20,7 @@ function AboutScreen (props) {
     const swipeHandler = useSwipeable({
         onSwipedDown: () => props.history.push("/"),
         onSwipedUp: () => props.history.push("/skills"),
-        onTap: () => setMobileModalVisible(true)
+        onTap: () => setMobileModalVisible(true),
     })
 
     return <section className="about animated">

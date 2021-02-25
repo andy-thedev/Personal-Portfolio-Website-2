@@ -272,7 +272,7 @@ code {
 
   .modal.mobile {
     height: 75%;
-    width: 75%;
+    width: 35%;
     /* Hide scrollbar for IE/Edge and Firefox, respectively */
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -390,12 +390,15 @@ code {
 /* Screen Optimization---------------------------------------------------------------- */
 
 @media (max-width: 1919px ) {
-  .split, .side.strip{
-    display: none;
-  }
 
   .centered.strip {
     object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px) {
+  .split, .side.strip{
+    display: none;
   }
 }
 
@@ -406,5 +409,9 @@ code {
 
   .centered.strip {
     width: 100%;
+  }
+
+  .modal.mobile {
+    width: 75%;
   }
 }

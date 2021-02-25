@@ -157,18 +157,6 @@ function FlappyBird (props) {
         <p>
             <a href="https://github.com/dnjsxo1860/Flappy-Bird-AI" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
-        <p>
-            Detailed explanations for the game and AI:<br/>
-            FBIRD.py (above each line of code)
-        </p>
-        <p>
-            Detailed explanations for NEAT specifications:<br/>
-            config_explanations.txt
-        </p>
-        <p>
-            Table of Contents:<br/>
-            README.md
-        </p>
         <p className="space"></p>
     </div>
 }

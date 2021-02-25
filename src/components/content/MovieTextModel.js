@@ -51,15 +51,6 @@ function MovieTextModel (props) {
         <p>
             <a href="https://github.com/dnjsxo1860/Movie-Review-Text-Classification" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
-        <p>
-            Detailed explanations:<br/>
-            Text_Classification.py<br/> 
-            (above each line of code)
-        </p>
-        <p>
-            Table of Contents:<br/>
-            README.md
-        </p>
     </div>
 }
 

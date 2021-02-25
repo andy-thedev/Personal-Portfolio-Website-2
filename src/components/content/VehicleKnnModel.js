@@ -49,15 +49,6 @@ function VehicleKnnModel (props) {
         <p>
             <a href="https://github.com/dnjsxo1860/KNN-Vehicle-Evaluation" target="_blank" rel="noopener noreferrer">In this Github link</a>
         </p>
-        <p>
-            Detailed explanations:<br/>
-            KNN.py<br/> 
-            (above each line of code)
-        </p>
-        <p>
-            Table of Contents:<br/>
-            README.md
-        </p>
     </div>
 }
 
